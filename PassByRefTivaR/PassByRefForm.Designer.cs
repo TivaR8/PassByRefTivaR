@@ -38,9 +38,9 @@
             this.lblAboveText.AutoSize = true;
             this.lblAboveText.Location = new System.Drawing.Point(99, 30);
             this.lblAboveText.Name = "lblAboveText";
-            this.lblAboveText.Size = new System.Drawing.Size(138, 13);
+            this.lblAboveText.Size = new System.Drawing.Size(139, 13);
             this.lblAboveText.TabIndex = 0;
-            this.lblAboveText.Text = "Click on image to change it.";
+            this.lblAboveText.Text = "Click on Image to change it.";
             this.lblAboveText.MouseLeave += new System.EventHandler(this.lblAboveText_MouseLeave);
             this.lblAboveText.MouseHover += new System.EventHandler(this.lblAboveText_MouseHover);
             // 
@@ -53,6 +53,7 @@
             this.picImages.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.picImages.TabIndex = 1;
             this.picImages.TabStop = false;
+            this.picImages.Click += new System.EventHandler(this.picImages_Click);
             // 
             // frmPassByRef
             // 

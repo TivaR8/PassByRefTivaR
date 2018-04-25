@@ -7,6 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+/*
+ * Created by: Tiva Rait
+ * Created on: 25-04-2018
+ * Created for: ICS3U Programming
+ * Daily Assignment – Day #28 - Pass by Reference & Click Events
+ * This program Lets you click on a picture box and changesthe card when this occurs
+*/
 
 namespace PassByRefTivaR
 {
@@ -29,7 +36,7 @@ namespace PassByRefTivaR
         {
             if (cardNumber == 1)
             {
-                aPictureBox.Image = Properties.Resources.AH;
+                aPictureBox.Image = Properties.Resources._3H;
             }
             else if ( cardNumber == 2)
             {
@@ -38,6 +45,30 @@ namespace PassByRefTivaR
             else if (cardNumber == 3)
             {
                 aPictureBox.Image = Properties.Resources.AD;
+            }
+            else if (cardNumber == 4)
+            {
+                aPictureBox.Image = Properties.Resources._2C;
+            }
+            else if (cardNumber == 5)
+            {
+                aPictureBox.Image = Properties.Resources._2H;
+            }
+            else if (cardNumber == 6)
+            {
+                aPictureBox.Image = Properties.Resources._2S;
+            }
+            else if (cardNumber == 7)
+            {
+                aPictureBox.Image = Properties.Resources._2D;
+            }
+            else if (cardNumber == 8)
+            {
+                aPictureBox.Image = Properties.Resources._3D;
+            }
+            else if (cardNumber == 9)
+            {
+                aPictureBox.Image = Properties.Resources.AH;
             }
         }
 
@@ -49,6 +80,21 @@ namespace PassByRefTivaR
         private void lblAboveText_MouseLeave(object sender, EventArgs e)
         {
             lblAboveText.Text = "Click on Image to change it.";
+        }
+
+        private void picImages_Click(object sender, EventArgs e)
+        {
+            // Declare locla constants
+            const int MAX_NUM_CARDS =  8;
+
+            // Declare local variables 
+            int aRandomNumber;
+
+            // Get a random number between 1 and the maximum
+            aRandomNumber = randNumberGenerator.Next(1, MAX_NUM_CARDS + 1);
+
+            // Get the card depending on the random selection
+            ChangeCard(ref this.picImages, aRandomNumber);
         }
     }
 }
